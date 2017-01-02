@@ -1,0 +1,47 @@
+Language parser improvements
+============================
+
+1. Single words:
+- make a list of them. 
+- any single word that is not on the list "I don't understand that command"
+
+2. Two words: Verb-Noun
+- check to see if verb is valid
+- check to see if noun goes with that verb.
+- if not, then "How do you ___ that"? (how do you climb that?" "There is no NOUN here")
+- now we have to run the correct method. Could use lambda? but don't know how, so large switch:
+
+switch
+verb, noun:
+	method(word2)
+
+- open paper
+- read paper
+- walk north
+- pull lever
+- kick leaves
+- use ____
+
+3. Three words.
+Unusual. One seems to be a direction, one seems to be a noun in the location
+- climb up tree [ climb up --> climb]  
+- climb down tree
+- pull lever down
+- pick up rock [ pick up --> take]
+- reach into water
+
+4. Four words: verb noun preposition noun
+- first make sure both nouns are items that are present
+
+examples:
+- take emerald from chest
+- put knife into chest
+- put hand in water
+- give A to B
+- attack troll with sword [wield sword, attack troll]
+- hit/smash rock with hammer
+- use hammer on door
+- use hammer to break rock [remove word "to"] (if there are 5 words and one is "to")
+
+
+
